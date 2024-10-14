@@ -1,0 +1,1307 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url(body.png);
+   
+}
+
+.bg-hero {
+    background: url('https://offloadmedia.feverup.com/secretdubai.co/wp-content/uploads/2023/07/07174621/shutterstock_151616084.jpg') center/cover no-repeat;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+/* Floating WhatsApp Icon */
+.floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Call Options (Initially Hidden) */
+.call-options {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.call-button {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.call-button i {
+    margin-right: 10px;
+}
+
+/* WhatsApp Call Button */
+.whatsapp-call {
+    background-color: #25d366;
+}
+
+.whatsapp-call:hover {
+    background-color: #1ebe56;
+}
+
+/* Direct Call Button */
+.direct-call {
+    background-color: #056579;
+}
+
+.direct-call:hover {
+    background-color: #045265;
+}
+
+/* Show Call Options when clicked */
+.show-options {
+    display: block;
+}
+
+
+
+
+
+
+
+
+.btn-primary {
+    background-color: #e0202b;
+    border-color: #e0202b;
+}
+
+.btn-primary:hover {
+    background-color: #b81b25;
+    border-color: #b81b25;
+}
+
+
+.card-title {
+    color: #1a689e;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 900;
+}
+
+
+
+
+
+
+
+
+/* navigation */
+.navbar {
+    background: linear-gradient(90deg,#ffffff, #9d211d) ; /* Gradient background */
+    padding: 20px 20px; /* Increased padding for more spacious look */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem; /* Increase font size for the brand */
+    
+    color: white; /* Change font color */
+}
+
+.navbar-brand img {
+    width: 130px; /* Increased logo size */
+    height: auto; /* Maintain aspect ratio */
+    
+}
+
+/* Navbar link styling with a new font */
+.navbar-nav .nav-item .nav-link {
+    color: rgb(0, 0, 0); /* Change link color */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    font-weight: 700; /* Bold font weight */
+    transition: color 0.3s; /* Transition for hover effect */
+    font-size: 14px;
+}
+
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #00ddfa; /* Change color on hover */
+}
+
+.navbar-toggler {
+    border: none; /* Remove border from the toggler */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="white" stroke-width="2" d="M4 7h22M4 15h22M4 23h22" /%3E%3C/svg%3E'); /* Custom color for the toggler icon */
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        background: linear-gradient(90deg, #1D699D, #33dbeb); /* Ensure mobile background gradient matches */
+    }
+}
+
+/* side navigation */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Start hidden */
+    width: 300px;
+    height: 100%;
+    background-color: rgba(21, 134, 199, 0.801);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1050; /* Set higher than navbar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    background-image: url('nav logo.png'); /* Path to your logo */
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 30px; /* Size of the close button */
+    color: #333; /* Close button color */
+    cursor: pointer;
+    align-self: flex-end; /* Position to the top right */
+    margin-bottom: 15px; /* Space below the close button */
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1; /* Allow nav to grow and fill space */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Space between links */
+}
+
+.sidebar-nav li {
+    margin: 0; /* Remove margin for a cleaner look */
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px; /* Padding for links */
+    font-size: 14px; /* Smaller font size for links */
+    border-radius: 5px; /* Rounded corners for hover effect */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sidebar-nav a:hover {
+    background-color: #d44747; /* Light gray background on hover */
+}
+
+.contact-button {
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-bottom: 80px; /* Margin below the button */
+    width: 100%; /* Full width */
+}
+
+.social-icons {
+   
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icons a {
+    font-size: 24px; /* Size for social icons */
+    color: #ffffff; /* Color for social icons */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hero section */
+#home {
+    position: relative; /* Position for child elements */
+    height: 100vh; /* Full height */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.bg-hero {
+    background: url('dubai.jpg') no-repeat center center; /* Set your background image */
+    background-size: cover; /* Cover the section */
+}
+
+.bg-hero::before {
+    content: ""; /* Create a pseudo-element for the overlay */
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Cover from the top */
+    left: 0; /* Cover from the left */
+    right: 0; /* Cover to the right */
+    bottom: 0; /* Cover to the bottom */
+    background: rgba(0, 0, 0, 0.5); /* Black transparent background */
+    backdrop-filter: blur(3px); /* Glass effect */
+    z-index: 1; /* Place behind content */
+}
+
+.container {
+    position: relative; /* Relative positioning for content */
+    z-index: 2; /* Bring content above overlay */
+    text-align: center; /* Center text */
+}
+
+.btn-primary {
+    z-index: 3; /* Ensure button is above everything */
+}
+
+
+
+
+
+
+
+
+
+.schengen-section {
+   /* background: linear-gradient(rgba(29, 105, 157, 0.8), rgba(29, 105, 157, 0.8)), url('path-to-your-background-image.jpg') no-repeat center center;*/
+    background-size: cover;
+    color: #ffffff;
+    padding: 60px 0;
+}
+
+.section-title {
+    color: #1a689e;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.country-card {
+    background-color: rgba(218, 213, 213, 0.85); /* Lighter semi-transparent background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px; /* Increased padding */
+    margin: 15px 0; /* Margin between cards */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.country-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+.country-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.country-card h3 {
+    font-size: 1.5rem; /* Country name size */
+    margin-top: 15px; /* Space above the title */
+    color: black;
+}
+
+.country-card p {
+    color: black;
+    font-size: 1rem; /* Smaller text for descriptions */
+    margin-top: 10px; /* Space above the description */
+}
+
+
+
+
+
+h2 i,
+h4 i {
+    margin-right: 10px; /* Space between icon and text */
+    color: #1D699D; /* Change icon color to match your theme */
+}
+
+.list-group-item i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #1D699D; /* Change icon color to match your theme */
+}
+
+
+
+
+
+
+
+
+.profile-border{
+    border: 6px solid #a41c12;
+
+}
+
+
+
+
+
+
+
+
+/* Courses Offered Section */
+#courses-offered {
+    position: relative;
+}
+
+.course-image {
+    position: relative;
+    height: 250px; /* Set a fixed height */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+}
+
+/* Align the info to the left */
+.course-info {
+    position: absolute;
+    left: 10px; /* Align to left */
+    color: white;
+    padding: 15px;
+    background: rgba(255, 0, 0, 0.5); /* Dark background for readability */
+    border-radius: 5px;
+    width: 50%; /* Set a width to ensure it doesn't take the entire space */
+}
+
+.course-info h3 {
+    margin: 0;
+    font-size: 1.5em; /* Adjusted heading size */
+}
+
+.course-info p {
+    margin-top: 5px;
+    font-size: 1em; /* Adjusted paragraph size */
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .course-image {
+        height: 200px; /* Adjust height for mobile */
+    }
+
+    .course-info {
+        left: 10px; /* Keep on left */
+        bottom: 10px; /* Align to bottom */
+        padding: 10px;
+        width: 60%; /* Ensure it stays on the left */
+    }
+
+    .course-info h3 {
+        font-size: 1.2em; /* Smaller heading size */
+    }
+
+    .course-info p {
+        font-size: 0.9em; /* Smaller paragraph size */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Job Vacancies Section */
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #056579;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Job Vacancies Section */
+#vacancies {
+    padding: 50px 0;
+    border-radius: 10px;
+}
+
+/* Image Styling */
+#vacancies img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Table Styling */
+.job-table {
+    width: 100%;
+    border-spacing: 0;
+    border: 2px solid #056579;
+}
+
+/* Add borders to all table cells */
+.job-table td {
+    border: 2px solid #056579;
+    padding: 10px;
+}
+
+/* Headings for each job listing */
+.job-heading {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #eb5204;
+    display: flex;
+    align-items: center;
+}
+
+/* Icons Styling for job listings */
+.job-heading i {
+    color: #cf0c0c;
+    margin-right: 10px;
+    font-size: 1.6rem;
+}
+
+/* Text styling for job listings */
+.job-text {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
+.job-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.job-heading i {
+    margin-right: 10px;
+}
+
+/* Apply Button Styling */
+.job-table a.btn {
+    margin-top: 10px;
+    background-color: #cf0c0c;
+    color: white;
+}
+
+/* Adjust for mobile view */
+@media (max-width: 768px) {
+    .job-table {
+        margin: 0 auto;
+        width: 93%;
+    }
+    .job-table td {
+        text-align: center;
+    }
+
+    .job-heading {
+        font-size: 1.2rem;
+    }
+
+    .job-text {
+        font-size: 0.85rem;
+    }
+
+    #vacancies img {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* How to Apply Section Styling */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.step p {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.step:last-child p {
+    justify-content: flex-start; /* Align text left for the last step */
+}
+
+.step i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #cf0c0c;
+}
+
+.step .fa-arrow-down {
+    margin-left: auto;
+    font-size: 1.5rem;
+    color: #cf0c0c;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .step p {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .step .fa-arrow-down {
+        margin-left: 10px;
+    }
+}
+
+
+
+
+
+
+/* Global presence operate */
+.full-width-image-container {
+    width: 100%; /* Full width container */
+    overflow: hidden;
+}
+
+.full-width-image {
+    width: 100%; /* Full width by default */
+    height: auto;
+    display: block;
+}
+/* Media query for larger screens (desktops) */
+@media (min-width: 1024px) {
+    .full-width-image {
+        width: 60%; /* Adjust width for desktops */
+        max-width: 1200px; /* Optional: limit max width */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+}
+
+
+
+
+
+
+/* Skills and training */
+#skills-training {
+    padding: 60px 0; 
+}
+
+#skills-training h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background-color: white; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    text-align: left; 
+    max-width: 96%;
+}
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%; /* Allow cards to take more width on smaller screens */
+        margin: auto; /* Ensure margins for spacing */
+    }
+}
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
+}
+
+.card h4 {
+    font-size: 1.5rem; 
+    color: #ff0000; /* Red color for icons */
+    text-align: center;
+}
+
+.card p {
+    font-size: 1rem; 
+    color: #555; 
+}
+
+.row {
+    margin-top: 20px; 
+}
+
+h4 i {
+    color: #ff0000; /* Red color for icons */
+    margin-right: 10px; 
+    font-size: 1.4rem; 
+}
+
+@media (max-width: 768px) {
+    #skills-training h2 {
+        font-size: 2rem; 
+    }
+
+    #skills-training h4 {
+        font-size: 1.3rem; 
+    }
+
+    #skills-training p {
+        font-size: 0.9rem; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Team Section */
+#meet-our-team {
+   
+    padding: 50px 0;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1 1 200px; /* Flexbox for responsive sizing */
+    box-sizing: border-box; /* Ensures padding/margin do not affect width */
+}
+
+.team-member img {
+    width: 70%; /* Full width of container */
+    height: auto; /* Maintain aspect ratio */
+    /*border-radius: 50%;  Circular images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #cf0c0c; /* Round border with specified color */
+}
+
+.team-member h4 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 calc(50% - 10px); /* 50% width minus margin */
+        margin-right: -70px; /* Add right margin for spacing */
+    }
+    .team-member img {
+        width: 70%; /* Full width of container */
+    }
+    
+    .team-member:nth-child(2n) {
+        margin-right: 0; /* Remove margin for every second item */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Our Sister Company Section */
+#our-sister-company {
+    padding: 50px 0;
+  }
+  #our-sister-company h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #056579;
+  }
+  
+  #our-sister-company p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  #our-sister-company img {
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Add shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  #our-sister-company .zoom-on-hover:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  }
+  
+  #our-sister-company a {
+    display: block;
+  }
+  
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    #our-sister-company .row {
+      text-align: center;
+    }
+    
+    #our-sister-company .order-md-2 {
+      order: 1;
+    }
+    
+    #our-sister-company img {
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    /* For mobile view, change the order of elements for the "Navon Study International" section */
+    #our-sister-company .order-md-1 {
+      order: 2; /* Place image after the text in mobile view */
+    }
+    
+    #our-sister-company .order-md-2 {
+      order: 1; /* Place text before the image in mobile view */
+    }
+  }
+  .section-divider {
+    border: 1px solid #8d8d8d; /* Light gray color */
+    margin: 30px 0; /* Space above and below the line */
+    width: 100%; /* Full width */
+}
+
+
+
+
+
+
+
+
+
+
+/* Testimonial cards */
+.testimonial-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: #9e1a1a;
+    text-align: center;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.testimonial-content {
+    margin-top: 15px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 1rem;
+    color: #333;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #1D699D; /* Using your brand color */
+}
+
+.testimonial-role {
+    font-size: 0.875rem;
+    color: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Gallery Section Styling */
+#unique-gallery {
+    
+    padding: 2rem 1rem; /* Vertical padding and horizontal padding */
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    transition: transform 0.3s; /* Smooth transform effect */
+}
+
+/* Hover Effect on Gallery Items */
+.gallery-item:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Adjustments for Mobile */
+@media (max-width: 768px) {
+    .gallery-item {
+        margin-bottom: 5px; /* Reduced space between items on mobile */
+    }
+}
+
+/* Custom CSS for Modal */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center; /* Centering content vertically */
+    min-height: calc(100% - 1rem); /* Adjust height for full view */
+}
+/* Close Button Customization */
+.btn-close {
+    z-index: 1050; /* Ensure it is above the image */
+    /* Add any additional styles as needed */
+    background-color: white;
+}
+/* Add this CSS to your stylesheet */
+.modal-open {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Frequently Question Section Title */
+
+
+
+  /* FAQ Container */
+  .faq-container {
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    
+    
+
+  }
+  @media (max-width: 768px) {
+    .faw-container {
+        max-width: 90%; /* Allow cards to take more width on smaller screens */
+        margin: auto; /* Ensure margins for spacing */
+    }
+}
+/* Centering only for larger screens */
+@media (min-width: 769px) {
+    .faq-container {
+        max-width: 70%;
+        margin: 0 auto; /* Center the container on larger screens */
+    }
+}
+  /* FAQ Question Styles */
+  .faq-question {
+    background-color: #f9f9f9;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-question:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* FAQ Icons */
+  .faq-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #9e1a1a;
+  }
+  
+  /* FAQ Answer */
+  .collapse {
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+  
+  .faq-toggle i {
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container for Google Map to make it responsive */
+.map-responsive {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 1rem; /* Space below the map */
+   
+    
+}
+
+/* Map iframe styling */
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* This one remains */
+    height: 100%; /* This will ensure it fills the map container properly */
+    border: 0;
+}
+
+/* Ensure map responsiveness and centering */
+@media (max-width: 768px) {
+    .map-responsive {
+        padding-top: 75%; /* Adjust aspect ratio for better mobile view if needed */
+        max-width: 100%;
+        margin: 0 auto; /* Center the map */
+    }
+}
+@media (max-width: 576px) {
+    .map-responsive {
+        padding-top: 70%; /* Adjust this to reduce space on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Form Card Styling */
+.form-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 50%;
+  }
+  
+  /* Right Image Styling */
+  .image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 45%;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .form-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .image-container img {
+      max-width: 100%;
+    }
+  
+    .container {
+      flex-direction: column;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+/* Blog Card */
+.blog-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.blog-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.blog-card:hover .overlay {
+    opacity: 1;
+}
+
+.blog-card .headline {
+    text-align: left;
+    position: absolute;
+    bottom: 15px; /* Adjust for space for progress bar */
+    left: 0; /* Align headline to the left */
+    width: 100%; /* Make the headline span the full width */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    color: white;
+    padding: 10px 15px; /* Padding to give space around the text */
+    font-size: 20px;
+    margin: 0;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+
+/* Progress Bar */
+.progress-bar {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 0; /* Initially 0 */
+    height: 5px;
+    background-color: rgb(252, 0, 0);
+    z-index: 2;
+    transition: width 1s ease; /* Transition animation */
+}
+
+.blog-card:hover .progress-bar {
+    width: 50%; /* On hover, the bar will expand to 50% of the image width */
+}
+
+/* Hover Effect on Click */
+.blog-card:hover img {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* Blog Section Styling */
+.blog-section {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout for Desktop View - Center the Image */
+.article-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center the content */
+    margin-bottom: 30px;
+}
+
+/* Text Section */
+.article-section {
+    text-align: left;
+    width: 100%;
+    max-width: 800px; /* Limit the width of the text for readability */
+    margin-bottom: 20px;
+}
+
+/* Image Section */
+.blog-image {
+    width: 100%;
+    max-width: 800px; /* Limit the width of the image for consistency */
+    height: auto;
+    text-align: center; /* Ensure the image is centered */
+    margin-bottom: 20px;
+}
+
+.blog-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure the entire image is visible */
+    border-radius: 8px;
+}
+
+/* Responsive Design for Blog Section */
+@media (max-width: 1024px) {
+    /* Adjust layout for tablet and smaller screens */
+    .article-wrapper {
+        flex-direction: column;
+    }
+
+    .article-section, .blog-image {
+        max-width: 100%; /* Make it full-width on smaller screens */
+        margin: 0 auto; /* Center on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ensure image and text are still full-width and responsive */
+    .blog-image img {
+        width: 100%;
+        height: auto; /* Maintain the height ratio */
+    }
+}
+.apply-button {
+    background-color: #1964bf; /* Vibrant coral color */
+    color: #ffffff; /* White text color */
+    padding: 15px 30px; /* Top-bottom and left-right padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold font */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    display: inline-block; /* Align button correctly */
+}
+
+.apply-button:hover {
+    background-color: #da3324; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+}
+.button-container {
+    text-align: center; /* Center-align the content */
+    margin: 20px 0; /* Add margin for spacing */
+}

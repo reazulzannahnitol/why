@@ -1,0 +1,431 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url(body.png);
+
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+footer {
+    width: 100vw;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+
+
+.btn-primary {
+    background-color: #e0202b;
+    border-color: #e0202b;
+}
+
+.btn-primary:hover {
+    background-color: #b81b25;
+    border-color: #b81b25;
+}
+
+
+.card-title {
+    color: #1a689e;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 900;
+}
+
+
+
+
+
+
+
+
+
+
+/* Floating WhatsApp Icon */
+.floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Call Options (Initially Hidden) */
+.call-options {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.call-button {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.call-button i {
+    margin-right: 10px;
+}
+
+/* WhatsApp Call Button */
+.whatsapp-call {
+    background-color: #25d366;
+}
+
+.whatsapp-call:hover {
+    background-color: #1ebe56;
+}
+
+/* Direct Call Button */
+.direct-call {
+    background-color: #056579;
+}
+
+.direct-call:hover {
+    background-color: #045265;
+}
+
+/* Show Call Options when clicked */
+.show-options {
+    display: block;
+}
+
+
+
+
+
+
+
+
+/* navigation */
+.navbar {
+    background: linear-gradient(90deg,#ffffff, #9d211d) ; /* Gradient background */
+    padding: 20px 20px; /* Increased padding for more spacious look */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem; /* Increase font size for the brand */
+    
+    color: white; /* Change font color */
+}
+
+.navbar-brand img {
+    width: 130px; /* Increased logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and text */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: rgb(0, 0, 0); /* Change link color */
+    font-weight: 500; /* Medium font weight */
+    font-weight: bold;
+    transition: color 0.3s; /* Transition for hover effect */
+    font-size: 14px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #064168; /* Change color on hover */
+}
+
+.navbar-toggler {
+    border: none; /* Remove border from the toggler */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="white" stroke-width="2" d="M4 7h22M4 15h22M4 23h22" /%3E%3C/svg%3E'); /* Custom color for the toggler icon */
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        background: linear-gradient(90deg, #1D699D, #33dbeb); /* Ensure mobile background gradient matches */
+    }
+}
+
+/* side navigation */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Start hidden */
+    width: 300px;
+    height: 100%;
+    background-color: rgba(21, 134, 199, 0.801);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1050; /* Set higher than navbar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    background-image: url('nav logo.png'); /* Path to your logo */
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 30px; /* Size of the close button */
+    color: #333; /* Close button color */
+    cursor: pointer;
+    align-self: flex-end; /* Position to the top right */
+    margin-bottom: 15px; /* Space below the close button */
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1; /* Allow nav to grow and fill space */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Space between links */
+}
+
+.sidebar-nav li {
+    margin: 0; /* Remove margin for a cleaner look */
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px; /* Padding for links */
+    font-size: 14px; /* Smaller font size for links */
+    border-radius: 5px; /* Rounded corners for hover effect */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sidebar-nav a:hover {
+    background-color: #d44747; /* Light gray background on hover */
+}
+
+.contact-button {
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-bottom: 80px; /* Margin below the button */
+    width: 100%; /* Full width */
+}
+
+.social-icons {
+   
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icons a {
+    font-size: 24px; /* Size for social icons */
+    color: #ffffff; /* Color for social icons */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+
+
+/* Gallery Section Styling */
+#unique-gallery {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 2rem 1rem; /* Vertical padding and horizontal padding */
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    transition: transform 0.3s; /* Smooth transform effect */
+}
+
+/* Remove border from images */
+.gallery-item img {
+    border: none; /* Remove any borders around the images */
+    display: block; /* Ensures there are no extra gaps */
+}
+
+/* Hover Effect on Gallery Items */
+.gallery-item:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Remove default background from the modal */
+.modal-content {
+    background-color: transparent; /* Make background transparent */
+    border: none; /* Remove any border */
+}
+
+/* Remove white background from the modal body */
+.modal-body {
+    background-color: transparent; /* Make background transparent */
+}
+
+/* Modal Image Customization */
+#modal-image {
+    border: none; /* Remove border around the modal image */
+    max-width: 80%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Adjustments for Mobile */
+@media (max-width: 768px) {
+    .gallery-item {
+        margin-bottom: 5px; /* Reduced space between items on mobile */
+    }
+}
+/* Adjustments for Desktop */
+@media (min-width: 769px) {
+    .gallery-item img {
+        max-width: 95%;  /* Smaller size for desktop view */
+        height: auto;    /* Maintain aspect ratio */
+    }
+}
+
+
+/* Prevents margin collapse and controls spacing */
+.row {
+    margin-left: -5px; /* Prevents extra space on left */
+    margin-right: -5px; /* Prevents extra space on right */
+}
+
+.col-6 {
+    padding-left: 5px; /* Space between columns */
+    padding-right: 5px; /* Space between columns */
+}
+
+/* Custom CSS for Modal */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center; /* Centering content vertically */
+    min-height: calc(100% - 1rem); /* Adjust height for full view */
+}
+
+/* Close Button Customization */
+.btn-close {
+    z-index: 1050; /* Ensure it is above the image */
+    /* Add any additional styles as needed */
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.top{
+    margin-top: 50px;
+    background-color: #f4f4f4;
+}
+/*All Section Title Styling */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #04b5c9;
+    margin-bottom: 3px;
+    padding-top: 22px;
+    text-align: center;
+}
+
+/* Horizontal line under the Title */
+.section-hr {
+    width: 60px;
+    height: 4px;
+    background-color: #e0202b;
+    border: none;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
